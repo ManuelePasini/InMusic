@@ -1,0 +1,45 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+prefix me: <http://api.stardog.com>
+prefix mfoem: <http://purl.obolibrary.org/obo/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+SELECT
+?listening 
+?songTitle 
+?artistName  
+(group_concat(DISTINCT ?emotionPreLabel;separator=" , ") as ?emotionsPre)
+(group_concat(DISTINCT ?arousedEmotion;separator=" , ") as ?arousedEmotions)
+(group_concat(DISTINCT ?emotionPostLabel;separator=" , ") as ?emotionsPost) 
+?desc 
+WHERE {
+  ?listening me:arouses ?someEmotion;
+    me:whileDoing/me:description ?desc;
+    me:listenTo/dc:title ?songTitle;
+    me:listenTo/foaf:maker/foaf:name ?artistName.
+    
+  ?someEmotion mfoem:MFOEM_000165 ?arousedEmotion.
+  
+  ?listening me:hasEmotionPre ?emotionPre;
+    me:hasEmotionPost ?emotionPost.
+    
+  ?emotionPre rdfs:subClassOf [
+      a owl:Restriction;
+      owl:onProperty mfoem:BFO_0000117;
+      owl:someValuesFrom mfoem:MFOEM_000208  
+    ];
+    rdfs:label ?emotionPreLabel.
+    
+  ?emotionPost rdfs:subClassOf [
+    a owl:Restriction;
+    owl:onProperty mfoem:BFO_0000117;
+    owl:someValuesFrom mfoem:MFOEM_000207
+  ];
+    rdfs:label ?emotionPostLabel.
+    
+} GROUP BY ?listening ?songTitle ?artistName ?desc
+ORDER BY DESC(COUNT(?songTitle))

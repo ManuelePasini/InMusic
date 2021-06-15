@@ -1,0 +1,56 @@
+@prefix me: <http://api.stardog.com>.
+
+<#river>
+ a me:Location;
+ me:description "The shores of Savio river a few kilometers outside Cesena, surrounded by trees and nature sounds ";
+ me:name "River".
+ 
+<#train>
+ a me:Location;
+ me:description "";
+ me:name "Train".
+ 
+<#car>
+ a me:Location;
+ me:description "";
+ me:name "Car".
+
+<#office>
+ a me:Location;
+ me:description "Working office where I try to do BPR";
+ me:name "Work office".
+ 
+<#pool>
+ a me:Location;
+ me:description "A round shaped pool in my garden";
+ me:name "Pool".
+ 
+<#lake>
+ a me:Location;
+ me:description "The shores of the Bolsena Lake, deep inside the Italian countryside";
+ me:name "Bolsena Lake".
+ 
+<#baker-street>
+ a me:Location;
+ me:description "A tiny appartment located in 221B Baker Street, London";
+ me:name "221B Baker Street".
+ 
+<#ny-appartment>
+ a me:Location;
+ me:description "A large suite in one of the highest New York skyscrapers";
+ me:name "NY skyscraper".
+ 
+<#mogadiscio-tent>
+ a me:Location;
+ me:description "A U.S.A. military tent in one of the camps in Mogadiscio";
+ me:name "Mogadiscio tent".
+ 
+<#usa-ocean>
+ a me:Location;
+ me:description "Seaside in Santa Cruz, California";
+ me:name "california dreamin".
+ 
+<#bedroom>
+ a me:Location;
+ me:description "my bedroom in Cesena";
+ me:name "bedroom".

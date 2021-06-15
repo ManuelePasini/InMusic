@@ -1,0 +1,299 @@
+
+## C.S.I. description ##
+
+<https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9> a mo:MusicGroup ;
+   foaf:name "Consorzio Suonatori Indipendenti";
+   foaf:nickname "C.S.I.";
+   foaf:member <https://musicbrainz.org/artist/8ed2e0b3-aa4c-4e13-bec3-dc7393ed4d6b>;
+   foaf:member <https://musicbrainz.org/artist/e9fcfbbf-1743-4f73-8744-ada8da7394ea>;
+   foaf:member <https://musicbrainz.org/artist/309d9809-cf74-493a-b56b-1378258f20fd>;
+   foaf:member <https://musicbrainz.org/artist/f23074f4-2c06-477a-bf1d-12fa66e087ee>;
+   foaf:member <https://musicbrainz.org/artist/4ab74d13-d1eb-4895-b874-6da5d8b1aac3>;
+   mo:compiled <https://musicbrainz.org/release-group/b1392450-e666-3926-a536-22c65f834433>.
+   
+ ## C.S.I. artists description ##
+ 
+   <https://musicbrainz.org/artist/425d85cb-a7a8-4345-9c69-68fd6c57aa7b>
+   a mo:MusicArtist;
+   foaf:name "Giovanni Lindo Ferretti" .
+<https://musicbrainz.org/artist/928bacaa-1614-4c80-988f-7cdcf8c6f00e>
+   a mo:MusicArtist;
+   foaf:name "Francesco Magnelli" .
+<https://musicbrainz.org/artist/14f8d782-beb5-4fe0-adb1-38f8deaecd35>
+   a mo:MusicArtist;
+   foaf:name "Giorgio Canali" .
+<https://musicbrainz.org/artist/7619ce13-d466-4115-92fb-9eba116c1c09>
+   a mo:MusicArtist;
+   foaf:name "Gianni Maroccolo" .
+<https://musicbrainz.org/artist/c279e815-b75c-4fae-9421-4e8db3c14ce9>
+   a mo:MusicArtist;
+   foaf:name "Massimo Zamboni".
+<https://musicbrainz.org/artist/16686af5-7d6a-45a2-abdc-0131fdfa38c3>
+   a mo:MusicArtist;
+   foaf:name "Ginevra Di Marco".
+   
+## Tabula Rasa Elettrificata songs description ##
+
+<https://musicbrainz.org/recording/61ad47d0-22ff-49f7-a5fc-d9d6978a15e1>
+  a mo:Track ;
+  dc:title "Unità di produzione" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"1"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/53f4943e-6de3-48a2-b348-05bacd1f41b0>
+  a mo:Track ;
+  dc:title "Brace" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"2"^^xsd:integer.
+
+<https://musicbrainz.org/recording/0b17822f-8895-4d02-9e51-a9f2243d74fa>
+  a mo:Track ;
+  dc:title "Forma e sostanza" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"3"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/18187bfb-7866-40b3-bb5b-069e2d0cc1d8>
+  a mo:Track ;
+  dc:title "Vicini" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"4"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/0ca65126-ffc0-4ada-9dae-ef143abde86d>
+  a mo:Track ;
+  dc:title "Ongii" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"5"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/9f9a5565-e83d-42b2-8c79-7adff837b5e6>
+  a mo:Track ;
+  dc:title "Gobi" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"6"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/645bffd3-63c6-4c43-bb4f-265e1ff5608b>
+  a mo:Track ;
+  dc:title "Bolormaa" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"7"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/d6f96162-b188-49e0-ba34-733e07610d0b>
+  a mo:Track ;
+  dc:title "Accade" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"8"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/837484f0-ca3a-4632-aaef-5cb9940707da>
+  a mo:Track ;
+  dc:title "Matrilineare" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"9"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/5e9117d8-7241-4e6b-af40-15dcc1d7ab3e>
+  a mo:Track ;
+  dc:title "Mimporta 'nasega" ;
+  foaf:maker <https://musicbrainz.org/artist/ecbd0ef7-e353-49a1-821b-69a67b8513b9>;
+  mo:track_number:"10"^^xsd:integer.
+  
+### Tabula Rasa Elettrificata Album description ###
+<https://musicbrainz.org/release-group/b1392450-e666-3926-a536-22c65f834433>
+ a mo:Record;
+ dc:title "Tabula Rasa Elettrificata";
+ mo:track_count 10;
+ mo:track <https://musicbrainz.org/recording/61ad47d0-22ff-49f7-a5fc-d9d6978a15e1>;
+ mo:track <https://musicbrainz.org/recording/53f4943e-6de3-48a2-b348-05bacd1f41b0>;
+ mo:track <https://musicbrainz.org/recording/0b17822f-8895-4d02-9e51-a9f2243d74fa>;
+ mo:track <https://musicbrainz.org/recording/18187bfb-7866-40b3-bb5b-069e2d0cc1d8>;
+ mo:track <https://musicbrainz.org/recording/0ca65126-ffc0-4ada-9dae-ef143abde86d>;
+ mo:track <https://musicbrainz.org/recording/9f9a5565-e83d-42b2-8c79-7adff837b5e6>;
+ mo:track <https://musicbrainz.org/recording/645bffd3-63c6-4c43-bb4f-265e1ff5608b>;
+ mo:track <https://musicbrainz.org/recording/d6f96162-b188-49e0-ba34-733e07610d0b>;
+ mo:track <https://musicbrainz.org/recording/837484f0-ca3a-4632-aaef-5cb9940707da>;
+ mo:track <https://musicbrainz.org/recording/5e9117d8-7241-4e6b-af40-15dcc1d7ab3e>.
+
+##The Kids Aren't Alright by The Offspring ##
+<https://musicbrainz.org/recording/0b6cea69-0935-415b-8d9c-981b3baef82d>
+  a mo:Track ;
+  dc:title "The Kids Aren't Alright" ;
+  foaf:maker <https://musicbrainz.org/artist/23a03e33-a603-404e-bcbf-2c00159d7067>.
+  
+##The Offspring ##
+<https://musicbrainz.org/artist/23a03e33-a603-404e-bcbf-2c00159d7067>
+   a mo:MusicGroup;
+   foaf:name "The Offspring".
+   
+##Hurt by Nine Inch Nails ##
+<https://musicbrainz.org/recording/f8f4287d-0a39-4725-b20e-2a3e1f50ca24>
+  a mo:Track ;
+  dc:title "Hurt" ;
+  foaf:maker <https://musicbrainz.org/artist/b7ffd2af-418f-4be2-bdd1-22f8b48613da>.
+  
+## Nine Inch Nails ##
+<https://musicbrainz.org/artist/b7ffd2af-418f-4be2-bdd1-22f8b48613da>
+   a mo:MusicGroup;
+   foaf:name "Nine Inch Nails".
+  
+##American Jesus by Bad Religion ##
+<https://musicbrainz.org/recording/453de38c-6d0d-4bb8-93ff-88d78774352a>
+  a mo:Track ;
+  dc:title "American Jesus" ;
+  foaf:maker <https://musicbrainz.org/artist/149e6720-4e4a-41a4-afca-6d29083fc091>.
+
+##Bad Religion ##
+<https://musicbrainz.org/artist/149e6720-4e4a-41a4-afca-6d29083fc091>
+   a mo:MusicGroup;
+   foaf:name "Bad Religion".
+   
+## How To Disappear Completely by Radiohead ##
+<https://mbz.plex.tv/recording/740d324e-4356-4116-812d-17ea76a190ce>
+  a mo:Track ;
+  dc:title "How to Disappear Completely" ;
+  foaf:maker <https://musicbrainz.org/artist/149e6720-4e4a-41a4-afca-6d29083fc091>.
+ 
+##Bad Religion ##
+<https://musicbrainz.org/artist/149e6720-4e4a-41a4-afca-6d29083fc091>
+   a mo:MusicGroup;
+   foaf:name "Bad Religion".
+   
+## Heroes by David Bowie ##
+<https://musicbrainz.org/recording/722190f8-f718-482f-a8bc-a8d479426a30>
+  a mo:Track ;
+  dc:title "Heroes" ;
+  foaf:maker <https://musicbrainz.org/artist/5441c29d-3602-4898-b1a1-b77fa23b8e50>.
+  
+## David Bowie Description ##
+<https://musicbrainz.org/artist/5441c29d-3602-4898-b1a1-b77fa23b8e50>
+   a mo:MusicArtist;
+   foaf:name "David Bowie".
+   
+##Fabrizio De Andrè description ##
+<https://musicbrainz.org/artist/204db5a8-78f1-4078-801f-ae8f456eeb60>
+   a mo:MusicArtist;
+   foaf:name "Fabrizio De Andrè" .
+   
+## Hotel Supramonte by Fabrizio De Andrè ##
+<https://musicbrainz.org/recording/16bc0d1d-7ac7-4ab3-b477-cd4a2d011c07>
+  a mo:Track ;
+  dc:title "Hotel Supramonte" ;
+  foaf:maker <https://musicbrainz.org/artist/204db5a8-78f1-4078-801f-ae8f456eeb60>.
+
+##Radiohead Description ##
+<https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711> a mo:MusicGroup ;
+   foaf:name "Radiohead";
+   foaf:member <https://musicbrainz.org/artist/8ed2e0b3-aa4c-4e13-bec3-dc7393ed4d6b>;
+   foaf:member <https://musicbrainz.org/artist/e9fcfbbf-1743-4f73-8744-ada8da7394ea>;
+   foaf:member <https://musicbrainz.org/artist/309d9809-cf74-493a-b56b-1378258f20fd>;
+   foaf:member <https://musicbrainz.org/artist/f23074f4-2c06-477a-bf1d-12fa66e087ee>;
+   foaf:member <https://musicbrainz.org/artist/4ab74d13-d1eb-4895-b874-6da5d8b1aac3>;
+   mo:compiled <https://musicbrainz.org/release-group/b1392450-e666-3926-a536-22c65f834433>.
+
+## Radiohead member description ##
+<https://musicbrainz.org/artist/8ed2e0b3-aa4c-4e13-bec3-dc7393ed4d6b>
+   a mo:MusicArtist;
+   foaf:name "Thom Yorke" .
+<https://musicbrainz.org/artist/e9fcfbbf-1743-4f73-8744-ada8da7394ea>
+   a mo:MusicArtist;
+   foaf:name "Jonny Greenwood" .
+<https://musicbrainz.org/artist/309d9809-cf74-493a-b56b-1378258f20fd>
+   a mo:MusicArtist;
+   foaf:name "Ed O'Brien" .
+<https://musicbrainz.org/artist/f23074f4-2c06-477a-bf1d-12fa66e087ee>
+   a mo:MusicArtist;
+   foaf:name "Colin Greenwood" .
+<https://musicbrainz.org/artist/4ab74d13-d1eb-4895-b874-6da5d8b1aac3>
+   a mo:MusicArtist;
+   foaf:name "Philip Selway".
+
+## Paranoid Android album's tracks description ##
+<https://musicbrainz.org/recording/4a7fea2e-545b-4c63-bc9a-9943cc3a29d7>
+  a mo:Track ;
+  dc:title "Airbag" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"1"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/9f9cf187-d6f9-437f-9d98-d59cdbd52757>
+  a mo:Track ;
+  dc:title "Paranoid Android" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"2"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/bd82738d-163c-4b1a-bfaf-7acffe30e68a>
+  a mo:Track ;
+  dc:title "Subterranean Homesick Alien" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"3"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/23c3c36b-9449-4484-9040-6ef2125999aa>
+  a mo:Track ;
+  dc:title "Exit Music (for a Film)" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"4"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/47b02a82-c3bf-4647-b894-dd1c8f608e7f>
+  a mo:Track ;
+  dc:title "Let Down" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"5"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/9e2ad5bc-c6f9-40d2-a36f-3122ee2072a3>
+  a mo:Track ;
+  dc:title "Karma Police" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"6"^^xsd:integer.
+  
+<https://musicbrainz.org/recording/5838f978-0822-4e28-874f-e1511324ec3a>
+  a mo:Track ;
+  dc:title "Filter Happier" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"7"^^xsd:integer.
+  
+ <https://musicbrainz.org/recording/ba0a796c-bd1f-4d4b-85a8-918f217a204a>
+  a mo:Track ;
+  dc:title "Electioneering" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"8"^^xsd:integer.
+
+<https://musicbrainz.org/recording/ba0a796c-bd1f-4d4b-85a8-918f217a204a>
+  a mo:Track ;
+  dc:title "Climbing Up the Walls" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"9"^^xsd:integer.
+
+<https://musicbrainz.org/recording/980a426e-623e-4ea5-98c7-008d037a0508>
+  a mo:Track ;
+  dc:title "No Surprises" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"10"^^xsd:integer.
+
+<https://musicbrainz.org/recording/79047824-f821-4b1a-9893-e0cea1c947dd>
+  a mo:Track ;
+  dc:title "Lucky" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"11"^^xsd:integer.
+
+<https://musicbrainz.org/recording/610c0012-6eb4-42a0-b759-3a2532ce0f15a>
+  a mo:Track ;
+  dc:title "The Tourist" ;
+  foaf:maker <https://musicbrainz.org/artist/a74b1b7f-71a5-4011-9441-d0b5e4122711>;
+  mo:track_number:"12"^^xsd:integer.
+
+## Paranoid Android album by Radiohead ##
+<https://musicbrainz.org/release-group/b1392450-e666-3926-a536-22c65f834433>
+ a mo:Record;
+ dc:title "Paranoid Android";
+ mo:track_count 12;
+ mo:track <https://musicbrainz.org/recording/4a7fea2e-545b-4c63-bc9a-9943cc3a29d7>;
+ mo:track <https://musicbrainz.org/recording/9f9cf187-d6f9-437f-9d98-d59cdbd52757>;
+ mo:track <https://musicbrainz.org/recording/bd82738d-163c-4b1a-bfaf-7acffe30e68a>;
+ mo:track <https://musicbrainz.org/recording/23c3c36b-9449-4484-9040-6ef2125999aa>;
+ mo:track <https://musicbrainz.org/recording/47b02a82-c3bf-4647-b894-dd1c8f608e7f>;
+ mo:track <https://musicbrainz.org/recording/9e2ad5bc-c6f9-40d2-a36f-3122ee2072a3>;
+ mo:track <https://musicbrainz.org/recording/5838f978-0822-4e28-874f-e1511324ec3a>;
+ mo:track <https://musicbrainz.org/recording/ba0a796c-bd1f-4d4b-85a8-918f217a204a>;
+ mo:track <https://musicbrainz.org/recording/ba0a796c-bd1f-4d4b-85a8-918f217a204a>;
+ mo:track <https://musicbrainz.org/recording/980a426e-623e-4ea5-98c7-008d037a0508>;
+ mo:track <https://musicbrainz.org/recording/79047824-f821-4b1a-9893-e0cea1c947dd>;
+ mo:track <https://musicbrainz.org/recording/610c0012-6eb4-42a0-b759-3a2532ce0f15a>.
+
+
+ 
+ 

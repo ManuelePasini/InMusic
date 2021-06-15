@@ -1,0 +1,179 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix stardog: <tag:stardog:api:> .
+@prefix : <http://api.stardog.com/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix music: <http://api.stardog.com> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix mfoem: <http://purl.obolibrary.org/obo/> .
+
+<http://api.stardog.comActivity> a owl:Class ;
+   <tag:stardog:studio:label> "Activity" ;
+   rdfs:label "Activity" ;
+   rdfs:comment "activity being done while listening to a musical work" .
+<http://api.stardog.comGroupActivity> a owl:Class ;
+   <tag:stardog:studio:label> "GroupActivity" ;
+   rdfs:label "GroupActivity" ;
+   rdfs:comment "activity that involves more people than the listener alone" ;
+   rdfs:subClassOf <http://api.stardog.comActivity> ;
+   owl:disjointWith <http://api.stardog.comIndividualActivity> .
+<http://api.stardog.comIndividualActivity> a owl:Class ;
+   <tag:stardog:studio:label> "IndividualActivity" ;
+   rdfs:label "IndividualActivity" ;
+   rdfs:comment "activity that involves the music listener alone." ;
+   rdfs:subClassOf <http://api.stardog.comActivity> ;
+   owl:disjointWith <http://api.stardog.comGroupActivity> .
+<http://api.stardog.comLocation> a owl:Class ;
+   <tag:stardog:studio:label> "Location" ;
+   rdfs:label "Location" ;
+   rdfs:comment "defines a place in the world" .
+<http://api.stardog.comMemory> a owl:Class ;
+   <tag:stardog:studio:label> "Memory" ;
+   rdfs:label "Memory" ;
+   rdfs:comment "Defines a memory for the MusicListener" .
+<http://api.stardog.comEpisodicMemory> a owl:Class ;
+   <tag:stardog:studio:label> "EpisodicMemory" ;
+   rdfs:label "EpisodicMemory" ;
+   rdfs:comment "Defines a memory lived by a music listener, a personal experience from the past" ;
+   rdfs:subClassOf <http://api.stardog.comMemory> .
+<http://api.stardog.comSemanticMemory> a owl:Class ;
+   <tag:stardog:studio:label> "SemanticMemory" ;
+   rdfs:label "SemanticMemory" ;
+   rdfs:comment "Defines a memory that doesn't belong to the musinc listener personal experience, it's a general world knowledge  accumulated through his life" ;
+   rdfs:subClassOf <http://api.stardog.comMemory> .
+<http://api.stardog.comMusicListening> a owl:Class ;
+   <tag:stardog:studio:label> "MusicListening" ;
+   rdfs:label "MusicListening" ;
+   rdfs:comment "A person who is listening to a musical work" ;
+   rdfs:subClassOf foaf:Person , _:bnode_6254c922_046c_4570_9d1b_8d640a850533_322 , _:bnode_6254c922_046c_4570_9d1b_8d640a850533_323 .
+<http://api.stardog.comlistenTo> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "listenTo" ;
+   rdfs:label "listenTo" ;
+   rdfs:comment "Defines a listening of a musical work" ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range mo:MusicalWork .
+<http://api.stardog.comatTime> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "atTime" ;
+   rdfs:label "atTime" ;
+   rdfs:comment "defines the time of a day when a person listened to a certain musical work." ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range <https://www.w3.org/TR/owl-time/DateTimeDescription> .
+<http://api.stardog.combringsBack> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "bringsBack" ;
+   rdfs:label "bringsBack" ;
+   rdfs:comment "an amotion associated to a memory" ;
+   rdfs:domain <http://api.stardog.comMemory> ;
+   rdfs:range mfoem:MFOEM_000195 .
+<http://api.stardog.comhasLocation> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasLocation" ;
+   rdfs:label "hasLocation" ;
+   rdfs:comment "defines the physical location where a person listened to a certain musical work and the physical location of a memory revived by a person after a certain listening to a musical work." ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range <http://api.stardog.comLocation> .
+<http://api.stardog.comhasMusicalXperience> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasMusicalXperience" ;
+   rdfs:label "hasMusicalXperience" ;
+   rdfs:comment "Defines the experience that follows a listening of a certain musical work" .
+<http://api.stardog.comhasEmotionalXperience> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasEmotionalXperience" ;
+   rdfs:label "hasEmotionalXperience" ;
+   rdfs:comment "Defines an emotional experience lived while listening to a certain musical work, in terms of emotions aroused" ;
+   rdfs:subPropertyOf <http://api.stardog.comhasMusicalXperience> .
+<http://api.stardog.comhasPhysicalXperience> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasPhysicalXperience" ;
+   rdfs:label "hasPhysicalXperience" ;
+   rdfs:subPropertyOf <http://api.stardog.comhasMusicalXperience> .
+<http://api.stardog.comarouses> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "arouses" ;
+   rdfs:label "arouses" ;
+   rdfs:comment "defines an emotion arosed by a listeing to a certain musical work" ;
+   rdfs:subPropertyOf <http://api.stardog.comhasEmotionalXperience> ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range mfoem:MFOEM_000195 .
+<http://api.stardog.comhasEmotionPre> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasEmotionPre" ;
+   rdfs:label "hasEmotionPre" ;
+   rdfs:subPropertyOf <http://api.stardog.comhasEmotionalXperience> ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range mfoem:MFOEM_000195 .
+<http://api.stardog.comhasEmotionPost> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasEmotionPost" ;
+   rdfs:label "hasEmotionPost" ;
+   rdfs:subPropertyOf <http://api.stardog.comhasEmotionalXperience> ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range mfoem:MFOEM_000195 .
+<http://api.stardog.comwhileDoing> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "whileDoing" ;
+   rdfs:label "whileDoing" ;
+   rdfs:subPropertyOf <http://api.stardog.comhasPhysicalXperience> ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range <http://api.stardog.comActivity> .
+<http://api.stardog.comwantToDo> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "wantToDo" ;
+   rdfs:label "wantToDo" ;
+   rdfs:subPropertyOf <http://api.stardog.comhasPhysicalXperience> ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range <http://api.stardog.comActivity> .
+<http://api.stardog.comhasPartecipants> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasPartecipants" ;
+   rdfs:label "hasPartecipants" ;
+   rdfs:comment "defines the partecipants involved in a group activity" ;
+   rdfs:domain <http://api.stardog.comGroupActivity> ;
+   rdfs:range foaf:Person .
+<http://api.stardog.comrevivesA> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "revivesA" ;
+   rdfs:label "revivesA" ;
+   rdfs:comment "defines a memory revived by listening to a certain musical work" ;
+   rdfs:domain <http://api.stardog.comMusicListening> ;
+   rdfs:range <http://api.stardog.comMemory> .
+:mfoem a owl:Ontology ;
+   owl:imports mfoem:mfoem.owl .
+<http://api.stardog.comdescription> a owl:DatatypeProperty ;
+   <tag:stardog:studio:label> "description" ;
+   rdfs:label "description" ;
+   rdfs:comment "Personal description about an activity or a location" ;
+   rdfs:domain <http://api.stardog.comActivity> , <http://api.stardog.comLocation> ;
+   rdfs:range xsd:string .
+<http://api.stardog.comname> a owl:DatatypeProperty ;
+   <tag:stardog:studio:label> "name" ;
+   rdfs:label "name" ;
+   rdfs:domain <http://api.stardog.comActivity> , <http://api.stardog.comLocation> ;
+   rdfs:range xsd:string .
+<http://api.stardog.comincome> a owl:DatatypeProperty ;
+   <tag:stardog:studio:label> "income" ;
+   rdfs:label "income" ;
+   rdfs:domain <http://api.stardog.comActivity> ;
+   rdfs:range xsd:boolean .
+<http://api.stardog.comActivityType> a owl:Class ;
+   <tag:stardog:studio:label> "ActivityType" ;
+   rdfs:label "ActivityType" ;
+   rdfs:comment "defines a type of an activity, its' a form of abstraction" .
+<http://api.stardog.comhasType> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "hasType" ;
+   rdfs:label "hasType" ;
+   rdfs:comment "defines the type of an activity, it's a form of abstraction to give some form of structure to activities" ;
+   rdfs:domain <http://api.stardog.comActivity> ;
+   rdfs:range <http://api.stardog.comActivityType> .
+<musicemotions:ontology:graphmemoryActivity> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "memoryActivity" ;
+   rdfs:label "memoryActivity" ;
+   rdfs:comment "defines an activity attached to a memory" ;
+   rdfs:domain <http://api.stardog.comEpisodicMemory> ;
+   rdfs:range <http://api.stardog.comActivity> .
+<musicemotions:ontology:graphmemoryLocation> a owl:ObjectProperty ;
+   <tag:stardog:studio:label> "memoryLocation" ;
+   rdfs:label "memoryLocation" ;
+   rdfs:comment "defines the location of some kind of memory" ;
+   rdfs:domain <http://api.stardog.comMemory> ;
+   rdfs:range <http://api.stardog.comLocation> .
+_:bnode_6254c922_046c_4570_9d1b_8d640a850533_322 a owl:Restriction ;
+   owl:onProperty <http://api.stardog.comlistenTo> ;
+   owl:cardinality 1 .
+_:bnode_6254c922_046c_4570_9d1b_8d640a850533_323 a owl:Restriction ;
+   owl:onProperty <http://api.stardogarouses> ;
+   <http://www.w3.org/2002/07/owl#cardinality:> 1 .

@@ -1,0 +1,228 @@
+@prefix me: <http://api.stardog.com>.
+@prefix time: <https://www.w3.org/TR/owl-time/>.
+@prefix mfoem: <http://purl.obolibrary.org/obo/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+<#travel-train-sad>
+ a me:MusicListening;
+ foaf:name "Manuele";
+ foaf:surname "Pasini";
+ me:listenTo <https://musicbrainz.org/recording/980a426e-623e-4ea5-98c7-008d037a0508>; #no surprises
+ me:hasLocation <#train>;
+ me:whileDoing <#work-travel>;
+ me:wantToDo <#relaxing-alone>;
+ me:revivesA <#sadMemory1-lostInTranslation>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000028>; #anxiety
+ me:hasEmotionPre <http://purl.obolibrary.org/obo/MFOEM_000080>; #feeling tired
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000028>; #anxiety
+ me:atTime <#time1>.
+ 
+
+ 
+<#time1>
+ a time:DateTimeDescription ;
+ time:day "---01"^^xsd:gDay ;
+ time:month "--11"^^xsd:gMonth ;
+ time:year "2021"^^xsd:gYear ;
+ time:hour "20"^^xsd:nonNegativeInteger ;
+ time:minute "05"^^xsd:nonNegativeInteger ;
+ time:timeZone <http://dbpedia.org/page/Coordinated_Universal_Time>.
+
+<#relaxing-car-happy>
+ a me:MusicListening;
+ foaf:name "Matthew";
+ foaf:surname "McConaughey";
+ me:listenTo <https://musicbrainz.org/recording/722190f8-f718-482f-a8bc-a8d479426a30>; #Heroes
+ me:hasLocation <#car>;
+ me:whileDoing <#relaxing-alone>;
+ me:wantToDo <#travelling3>;
+ me:revivesA <#happyMemory2-car-travel>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000177>; #hope
+ me:hasEmotionPre <http://purl.obolibrary.org/obo/MFOEM_000116>; #feeling out of control
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000114>; #feeling calm
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000178>; #inspired
+ me:atTime <#time2>.
+ 
+<#time2>
+ a time:DateTimeDescription ;
+ time:day "---20"^^xsd:gDay ;
+ time:month "--06"^^xsd:gMonth ;
+ time:year "2021"^^xsd:gYear ;
+ time:hour "22"^^xsd:nonNegativeInteger ;
+ time:minute "05"^^xsd:nonNegativeInteger ;
+ time:timeZone <http://dbpedia.org/page/Coordinated_Universal_Time>.
+ 
+<#working-office-tired>
+ a me:MusicListening;
+ foaf:name "David";
+ foaf:surname "Beckham";
+ me:listenTo <https://musicbrainz.org/recording/9e2ad5bc-c6f9-40d2-a36f-3122ee2072a3>; #Karma Police
+ me:hasLocation <#office>;
+ me:whileDoing <#working>;
+ me:wantToDo <#travelling3>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000108>; #feeling bad
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000080>; # feeling tired
+ me:atTime <#time3>.
+ 
+<#time3>
+ a time:DateTimeDescription ;
+ time:day "---12"^^xsd:gDay ;
+ time:month "--03"^^xsd:gMonth ;
+ time:year "2021"^^xsd:gYear ;
+ time:hour "16"^^xsd:nonNegativeInteger ;
+ time:minute "15"^^xsd:nonNegativeInteger ;
+ time:timeZone <http://dbpedia.org/page/Coordinated_Universal_Time>.
+ 
+<#working-office-enthusiast>
+ a me:MusicListening;
+ foaf:name "Eric";
+ foaf:surname "Clapton";
+ me:listenTo <https://musicbrainz.org/recording/0b17822f-8895-4d02-9e51-a9f2243d74fa>; #Forma e Sostanza
+ me:revivesA  <#happyMemory3-children>; 
+ me:hasLocation <#office>;
+ me:whileDoing <#working>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000041>; #pride
+ me:atTime <#time4>.
+ 
+<#time4>
+ a time:DateTimeDescription ;
+ time:day "---18"^^xsd:gDay ;
+ time:month "--11"^^xsd:gMonth ;
+ time:year "2020"^^xsd:gYear ;
+ time:hour "03"^^xsd:nonNegativeInteger ;
+ time:minute "15"^^xsd:nonNegativeInteger ;
+ time:timeZone <http://dbpedia.org/page/Coordinated_Universal_Time>.
+ 
+<#thinking-war-sad>
+ a me:MusicListening;
+ foaf:name "Sherlock";
+ foaf:surname "Holmes";
+ me:listenTo <https://musicbrainz.org/recording/453de38c-6d0d-4bb8-93ff-88d78774352a>; #american Jesus
+ me:hasLocation <#baker-street>;
+ me:whileDoing <#thinking>;
+ me:revivesA <#sadMemory2-Mogadiscio>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000016>; # grief
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000018>; # contempt
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000028>; # anxiety
+ me:hasEmotionPre <http://purl.obolibrary.org/obo/MFOEM_000080>; #Feeling tired
+ me:wantToDo <#relaxing>;
+ me:atTime <#time4>.
+ 
+ <#road-to-superbowl>
+ a me:MusicListening;
+ foaf:name "Nick";
+ foaf:surname "Chubb";
+ me:listenTo <https://musicbrainz.org/recording/0b6cea69-0935-415b-8d9c-981b3baef82d>; #Kids aren't alright
+ me:hasLocation <#car>;
+ me:whileDoing <#preparing-match>;
+ me:wantToDo <#celebrating>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000109>; # feelinge energetic
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000178>; # inspiration 
+ me:hasEmotionPre <http://purl.obolibrary.org/obo/MFOEM_000124>; #feeling nervous
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000110>; #feeling in control
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000200>; #enthusiasm
+ me:atTime <#time6>.
+ 
+ <#time6>
+ a time:DateTimeDescription ;
+ time:day "---07"^^xsd:gDay ;
+ time:month "--02"^^xsd:gMonth ;
+ time:year "2021"^^xsd:gYear ;
+ time:hour "18"^^xsd:nonNegativeInteger ;
+ time:minute "15"^^xsd:nonNegativeInteger ;
+ time:timeZone <http://dbpedia.org/page/Coordinated_Universal_Time>.
+ 
+<#studying-happy-happy>
+ a me:MusicListening;
+ foaf:name "Robert";
+ foaf:surname "Allen Zimmerman";
+ me:listenTo <https://musicbrainz.org/recording/453de38c-6d0d-4bb8-93ff-88d78774352a>; #american Jesus
+ me:hasLocation <#bedroom>;
+ me:whileDoing <#studying>;
+ me:wantToDo <#celebrating>;
+ me:revivesA <#happyMemory3-children>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000109>; # feelinge energetic
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000178>; # inspiration 
+ me:hasEmotionPre <http://purl.obolibrary.org/obo/MFOEM_000080>; #feeling tired
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000118>; #feeling strong
+ me:atTime <#time6>.
+ 
+<#alone-in-NY>
+ a me:MusicListening;
+ foaf:name "Sophia";
+ foaf:surname "Coppola";
+ me:listenTo <https://musicbrainz.org/recording/f8f4287d-0a39-4725-b20e-2a3e1f50ca24>; #hurt 
+ me:hasLocation <#ny-appartment>;
+ me:whileDoing <#relaxing-alone>;
+ me:wantToDo <#talk>;
+ me:arouses <#sehnsucht>; #sehnsucht
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000036>; # sensory pleasuse
+ me:hasEmotionPre <http://purl.obolibrary.org/obo/MFOEM_000029>; #stress
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000052>; #compassion
+ me:atTime <#time6>.
+ 
+<#sehnsucht>
+  a owl:Class ;
+  rdfs:subClassOf <http://purl.obolibrary.org/obo/MFOEM_000001>, [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
+    owl:someValuesFrom <http://purl.obolibrary.org/obo/MFOEM_000208>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
+    owl:someValuesFrom [
+      a owl:Class ;
+      owl:intersectionOf (
+       <http://purl.obolibrary.org/obo/MFOEM_000002>
+       _:genid6
+     )
+    ]
+  ];
+  mfoem:BFO_000011 <http://purl.obolibrary.org/obo/MFOEM_000122>;
+  mfoem:IAO_0000115 "An extremely negative emotion translated from German as \"longing\", \"desire\", \"yearning\", or \"craving\". Some psychologists use the word to represent thoughts and feelings about all facets of life that are unfinished or imperfect, paired with a yearning for ideal alternative experiences." ;
+  mfoem:MFOEM_000165 "Sehnsucht" ;
+  foaf:name "ciao";
+  rdfs:label "Sehnsucht" .
+
+_:genid6
+  a owl:Restriction ;
+  owl:onProperty mfoem:MFOEM_000213 ;
+  owl:someValuesFrom mfoem:MFOEM_000106 .
+	
+<#time7>
+ a time:DateTimeDescription ;
+ time:day "---20"^^xsd:gDay ;
+ time:month "--12"^^xsd:gMonth ;
+ time:year "2022"^^xsd:gYear ;
+ time:hour "03"^^xsd:nonNegativeInteger ;
+ time:minute "15"^^xsd:nonNegativeInteger ;
+ time:timeZone <http://dbpedia.org/page/Coordinated_Universal_Time>.
+ 
+ <#working-bolsena-wanna-fish>
+ a me:MusicListening;
+ foaf:name "Manuele";
+ foaf:surname "Pasini";
+ me:listenTo <https://musicbrainz.org/recording/61ad47d0-22ff-49f7-a5fc-d9d6978a15e1>; #unità produzione 
+ me:hasLocation <#lake>;
+ me:whileDoing <#work-travel>;
+ me:wantToDo <#fishing>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000028>; #anxiety
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000018>; #contempt
+ me:hasEmotionPre <http://purl.obolibrary.org/obo/MFOEM_000109>; # feelinge energetic
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000111>; #feeling restless
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000051>; #disappointment
+ me:atTime <#time6>.
+ 
+  
+<#karma-police-positive>
+ a me:MusicListening;
+ foaf:name "Allen";
+ foaf:surname "Ginsberg";
+ me:listenTo <https://musicbrainz.org/recording/9e2ad5bc-c6f9-40d2-a36f-3122ee2072a3>; #karma police
+ me:hasLocation <#lake>;
+ me:whileDoing <#reading-kerouac>;
+ me:wantToDo <#fishing>;
+ me:arouses <http://purl.obolibrary.org/obo/MFOEM_000178>; #inspiration
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000109>; #feeling energetic
+ me:hasEmotionPost <http://purl.obolibrary.org/obo/MFOEM_000042>; #happiness
+ me:atTime <#time6>.

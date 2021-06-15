@@ -1,0 +1,75 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+prefix me: <http://api.stardog.com>
+prefix mfoem: <http://purl.obolibrary.org/obo/>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?song ?title ?artist 
+?positiveEmotions
+?negativeEmotions
+?positiveMemoryEmotions
+?negativeMemoryEmotions
+(((?positiveEmotions + ?positiveMemoryEmotions) / ?allEmotions) as ?positivePercentage)
+WHERE {
+
+?listening me:listenTo ?song.
+
+?song dc:title ?title;
+  foaf:maker/foaf:name ?artist.
+
+OPTIONAL{
+  SELECT ?song ?title ?artist (COUNT(DISTINCT ?emotion) as ?positive) WHERE{
+    ?listening me:listenTo ?song;
+      me:arouses ?emotion.
+    ?emotion rdfs:subClassOf ?emotionNegative.
+     
+    ?emotionNegative a owl:Restriction;
+      owl:onProperty mfoem:BFO_0000117;
+      owl:someValuesFrom mfoem:MFOEM_000207.
+  } GROUP BY ?song ?title ?artist
+}
+
+OPTIONAL{
+  SELECT ?song ?title ?artist (COUNT(DISTINCT ?emotion) as ?negative) WHERE{
+    ?listening me:listenTo ?song;
+      me:arouses ?emotion.
+    ?emotion rdfs:subClassOf ?emotionNegative.
+     
+    ?emotionNegative a owl:Restriction;
+      owl:onProperty mfoem:BFO_0000117;
+      owl:someValuesFrom mfoem:MFOEM_000208.
+  } GROUP BY ?song ?title ?artist
+}
+OPTIONAL{
+  SELECT ?song ?title ?artist (COUNT(DISTINCT ?emotion) as ?positiveMemories) WHERE{
+    ?listening me:listenTo ?song;
+      me:revivesA/me:bringsBack ?emotion.
+    ?emotion rdfs:subClassOf ?emotionPositive.
+     
+  ?emotionPositive a owl:Restriction;
+    owl:onProperty mfoem:BFO_0000117;
+    owl:someValuesFrom mfoem:MFOEM_000207.
+  } GROUP BY ?song ?title ?artist
+}
+OPTIONAL{
+  SELECT ?song ?title ?artist (COUNT(DISTINCT ?emotion) as ?negativeMemories) WHERE{
+    ?listening me:listenTo ?song;
+      me:revivesA/me:bringsBack ?emotion.
+    ?emotion rdfs:subClassOf ?emotionNegative.
+     
+    ?emotionNegative a owl:Restriction;
+      owl:onProperty mfoem:BFO_0000117;
+      owl:someValuesFrom mfoem:MFOEM_000208.
+  } GROUP BY ?song ?title ?artist
+}
+BIND(COALESCE(?negativeMemories,0) as ?negativeMemoryEmotions)
+BIND(COALESCE(?positiveMemories,0) as ?positiveMemoryEmotions)
+BIND(COALESCE(?positive,0) as ?positiveEmotions)
+BIND(COALESCE(?negative,0) as ?negativeEmotions)
+BIND((?negativeMemoryEmotions + ?positiveMemoryEmotions + ?positiveEmotions + ?negativeEmotions) as ?allEmotions)
+} GROUP BY ?song ?title ?artist ?positiveEmotions ?negativeEmotions ?positiveMemoryEmotions ?negativeMemoryEmotions ?allEmotions 
+ORDER BY DESC(?positivePercentage)
