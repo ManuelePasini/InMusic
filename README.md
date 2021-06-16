@@ -63,7 +63,7 @@ Step per l’installazione:
     **Default Graph**”
 
 9.  per aggiungere le query, spostarsi nella sezione Workspace ed
-    effettuare l’upload dei file cliccando in alto a sinistra sul ”+”.
+    effettuare l’upload dei file cliccando in alto a destra sul ”+”.
 
   [qui]: https://www.stardog.com/get-started/
   [Stardog Studio]: https://stardog.studio/
