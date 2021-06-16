@@ -142,13 +142,9 @@
 <http://api.stardog.comname> a owl:DatatypeProperty ;
    <tag:stardog:studio:label> "name" ;
    rdfs:label "name" ;
+   rdfs:comment "Defines the name of an activity or a location" ;
    rdfs:domain <http://api.stardog.comActivity> , <http://api.stardog.comLocation> ;
    rdfs:range xsd:string .
-<http://api.stardog.comincome> a owl:DatatypeProperty ;
-   <tag:stardog:studio:label> "income" ;
-   rdfs:label "income" ;
-   rdfs:domain <http://api.stardog.comActivity> ;
-   rdfs:range xsd:boolean .
 <http://api.stardog.comActivityType> a owl:Class ;
    <tag:stardog:studio:label> "ActivityType" ;
    rdfs:label "ActivityType" ;
