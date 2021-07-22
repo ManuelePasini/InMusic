@@ -1,56 +1,56 @@
-@prefix me: <http://api.stardog.com>.
+@prefix me: <http://api.stardog.com/>.
 
 <#river>
  a me:Location;
- me:description "The shores of Savio river a few kilometers outside Cesena, surrounded by trees and nature sounds ";
- me:name "River".
+ dc:description "The shores of Savio river a few kilometers outside Cesena, surrounded by trees and nature sounds ";
+ dc:title "River".
  
 <#train>
  a me:Location;
- me:description "";
- me:name "Train".
+ dc:description "";
+ dc:title "Train".
  
 <#car>
  a me:Location;
- me:description "";
- me:name "Car".
+ dc:description "";
+ dc:title "Car".
 
 <#office>
  a me:Location;
- me:description "Working office where I try to do BPR";
- me:name "Work office".
+ dc:description "Working office where I try to do BPR";
+ dc:title "Work office".
  
 <#pool>
  a me:Location;
- me:description "A round shaped pool in my garden";
- me:name "Pool".
+ dc:description "A round shaped pool in my garden";
+ dc:title "Pool".
  
 <#lake>
  a me:Location;
- me:description "The shores of the Bolsena Lake, deep inside the Italian countryside";
- me:name "Bolsena Lake".
+ dc:description "The shores of the Bolsena Lake, deep inside the Italian countryside";
+ dc:title "Bolsena Lake".
  
 <#baker-street>
  a me:Location;
- me:description "A tiny appartment located in 221B Baker Street, London";
- me:name "221B Baker Street".
+ dc:description "A tiny appartment located in 221B Baker Street, London";
+ dc:title "221B Baker Street".
  
-<#ny-appartment>
+<#nyAppartment>
  a me:Location;
- me:description "A large suite in one of the highest New York skyscrapers";
- me:name "NY skyscraper".
+ dc:description "A large suite in one of the highest New York skyscrapers";
+ dc:title "NY skyscraper".
  
-<#mogadiscio-tent>
+<#mogadiscioTent>
  a me:Location;
- me:description "A U.S.A. military tent in one of the camps in Mogadiscio";
- me:name "Mogadiscio tent".
+ dc:description "A U.S.A. military tent in one of the camps in Mogadiscio";
+ dc:title "Mogadiscio tent".
  
-<#usa-ocean>
+<#usaOcean>
  a me:Location;
- me:description "Seaside in Santa Cruz, California";
- me:name "california dreamin".
+ dc:description "Seaside in Santa Cruz, California";
+ dc:title "california dreamin".
  
 <#bedroom>
  a me:Location;
- me:description "my bedroom in Cesena";
- me:name "bedroom".
+ dc:description "my bedroom in Cesena";
+ dc:title "bedroom".

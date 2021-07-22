@@ -1,4 +1,4 @@
-@prefix me: <http://api.stardog.com>.
+@prefix me: <http://api.stardog.com/>.
 
 ###Persons
 
@@ -47,38 +47,38 @@
 
 <#fishing>
  a me:IndividualActivity;
- me:name "Carpfishing";
- me:description "Trying to catch some carp all alone in a childhood place";
+ dc:title "Carpfishing";
+ dc:description "Trying to catch some carp all alone in a childhood place";
  me:hasType <#fishing>;
  me:income "false".
 
 <#work-travel>
  a me:IndividualActivity;
- me:name "Train Travelling";
- me:description "Travelling in a train full of people from Milan to Cesena";
+ dc:title "Train Travelling";
+ dc:description "Travelling in a train full of people from Milan to Cesena";
  me:hasType <#work>;
  me:hasType <#travel>;
  me:income "true".
  
 <#travelling2>
  a me:IndividualActivity;
- me:name "Car travelling";
- me:description "Travelling home from a concert while driving my car in the sunset";
+ dc:title "Car travelling";
+ dc:description "Travelling home from a concert while driving my car in the sunset";
  me:hasType <#travel>;
  me:income "false".
  
 <#travelling3>
  a me:IndividualActivity;
- me:name "Travel to my dream locations";
- me:description "Travel to places I've always wanted to see like Mongolia and the whole South Asia";
+ dc:title "Travel to my dream locations";
+ dc:description "Travel to places I've always wanted to see like Mongolia and the whole South Asia";
  me:hasType <#travel>.
  
 <#relaxing>
  a me:GroupActivity;
  me:member <#hemingway>;
  me:member <#leo>;
- me:name "Beer by the pool";
- me:description "having a beer by the pool with some of my dearest friends";
+ dc:title "Beer by the pool";
+ dc:description "having a beer by the pool with some of my dearest friends";
  me:hasType <#relax>;
  me:income "false".
  
@@ -86,67 +86,67 @@
   a me:GroupActivity;
   me:member <#guybrush>;
   me:member <#simone>;
-  me:name "Selling false hope";
-  me:description "Rebuilding an enterprise's internal working processes";
+  dc:title "Selling false hope";
+  dc:description "Rebuilding an enterprise's internal working processes";
   me:hasType <#work>;
   me:income "true".
   
 <#reading-kerouac>
  a me:IndividualActivity;
- me:name "Reading On The Road by Jack Kerouac";
- me:description "Reading the one book that once read will change your life";
+ dc:title "Reading On The Road by Jack Kerouac";
+ dc:description "Reading the one book that once read will change your life";
  me:hasType <#reading>;
  me:income "false".
  
 <#relaxing-alone>
  a me:IndividualActivity;
- me:name "Relaxing ";
- me:description "Spending some time far away from the rest of the world";
+ dc:title "Relaxing ";
+ dc:description "Spending some time far away from the rest of the world";
  me:hasType <#relax>;
  me:income "false".
  
 <#thinking-after-battle>
  a me:IndividualActivity;
- me:name "Go over a recent life threat";
- me:description "I'm sitting in my tent bed thinking about the hell I luckily escaped from and about those who ain't here anymore";
+ dc:title "Go over a recent life threat";
+ dc:description "I'm sitting in my tent bed thinking about the hell I luckily escaped from and about those who ain't here anymore";
  me:hasType <#work>;
  me:income "true".
  
 <#studying>
  a me:IndividualActivity;
- me:name "Studying IT";
- me:description "Studying for Semantic Web exam";
+ dc:title "Studying IT";
+ dc:description "Studying for Semantic Web exam";
  me:hasType <#work>;
  me:income "false".
  
 <#preparing-match>
  a me:GroupActivity;
- me:name "Pre-match-playlist";
+ dc:title "Pre-match-playlist";
  me:member <#brady>;
  me:member <#manning>;
  me:member <#miller>;
- me:description "Getting ready to play the Superbowl";
+ dc:description "Getting ready to play the Superbowl";
  me:hasType <#work>;
  me:income "true".
  
 <#thinking>
  a me:IndividualActivity;
- me:name "Thinking Alone";
- me:description "Thinking alone about my life and the meaning of existence";
+ dc:title "Thinking Alone";
+ dc:description "Thinking alone about my life and the meaning of existence";
  me:hasType <#relax>;
  me:income "false".
  
 <#celebrating>
  a me:GroupActivity;
- me:name "Win Celebration";
- me:description "Celebrating SuperBowl win";
+ dc:title "Win Celebration";
+ dc:description "Celebrating SuperBowl win";
  me:hasType <#celebrating>;
  me:income "true".
  
 <#talk>
  a me:GroupActivity;
- me:name "Deep talk";
- me:description "Deep talk in front of a glass of wine";
+ dc:title "Deep talk";
+ dc:description "Deep talk in front of a glass of wine";
  me:hasType <#relax>;
  me:income "false".
  
@@ -154,37 +154,37 @@
  
 <#work>
  a me:ActivityType;
- me:name "Work";
+ dc:title "Work";
  rdfs:comment "An activity can be referred as a working activity if it describes some kind of activity performed by a person that involves a reward, whether it is money or some other kind".
  
 <#relax>
  a me:ActivityType;
- me:name "Relaxing";
+ dc:title "Relaxing";
  rdfs:comment "an activity that aims to relax and chill". 
 
 <#hobby>
  a me:ActivityType;
- me:name "Hobby";
+ dc:title "Hobby";
  rdfs:comment "Defines an hobby".
 
 <#travel>
  a me:ActivityType;
- me:name "Travel";
+ dc:title "Travel";
  rdfs:comment "Defines a travel from a location towards another one".
  
 <#reading>
  a me:ActivityType;
  rdfs:subClassOf <#hobby>;
- me:name "Reading";
+ dc:title "Reading";
  rdfs:comment "Defines the activity of reading, whether it's a book, an e-book or something that can be read".
  
 <#fishing>
  a me:ActivityType;
  rdfs:subClassOf <#hobby>;
- me:name "Fishing";
+ dc:title "Fishing";
  rdfs:comment "Defines the activity of fishing in its every form".
  
 <#celebrating>
  a me:ActivityType;
- me:name "Celebrating";
+ dc:title "Celebrating";
  rdfs:comment "defines a celebration of any sort".

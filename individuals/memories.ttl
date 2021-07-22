@@ -1,4 +1,4 @@
-@prefix me: <http://api.stardog.com>.
+@prefix me: <http://api.stardog.com/>.
 
 <#sadMemory1-lostInTranslation>
  a me:SemanticMemory;
