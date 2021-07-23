@@ -24,19 +24,6 @@ public class ConnectionManager {
     private final static String username = "admin";
     private final static String password = "admin";
     private final static String url = "http://localhost:5820";
-    private static final String NS = "http://api.stardog.com/";
-    private static final String MUSIC_LISTENING_TYPE = NS+"MusicListening";
-    private static final String PRE_LISTENING_IMAGE =  NS+"preListeningImage";
-    private static final String POST_LISTENING_IMAGE =  NS+"postListeningImage";
-    private static final String LOCATION_TYPE = NS+"Location";
-    private static final String ACTIVITY_TYPE = NS+"Activity";
-    private static final String EPISODIC_MEMORY_TYPE = NS+"EpisodicMemory";
-    private static final String LISTEN_TO = NS + "listenTo";
-    private static final String HAS_TYPE =  NS+"hasType";
-    private static final String WHILE_DOING =  NS+"whileDoing";
-    private static final String WANT_DO =  NS+"wantToDo";
-    private static final String HAS_LOCATION =  NS+"hasLocation";
-    private static final String REVIVES_MEMORY = NS+"revivesMemory";
     private final static long blockCapacityTime = 900;
     private final static TimeUnit blockCapacityTimeUnit = TimeUnit.SECONDS;
     private final static long expirationTime = 300;
@@ -88,7 +75,7 @@ public class ConnectionManager {
     public static ConnectionPool createConnectionPool(ConnectionConfiguration connectionConfig) {
         final int maxPool = 200;
         final int minPool = 10;
-         ConnectionPoolConfig poolConfig= ConnectionPoolConfig
+        ConnectionPoolConfig poolConfig= ConnectionPoolConfig
                 .using(connectionConfig)
                 .minPool(minPool)
                 .maxPool(maxPool)
@@ -98,7 +85,7 @@ public class ConnectionManager {
     }
 
     public BidiMap<String, String> getSongs() {
-        SelectQuery query = connection.select("prefix me: <"+NS+">" +
+        SelectQuery query = connection.select("prefix me: <"+MusicOntology.NS+">" +
                 "PREFIX dc: <http://purl.org/dc/elements/1.1/>" +
                 "PREFIX foaf: <http://xmlns.com/foaf/0.1/>" +
                 "PREFIX mo: <http://purl.org/ontology/mo/>"+
@@ -119,7 +106,7 @@ public class ConnectionManager {
         return output;
     }
     public HashMap<String, String> getLocations() {
-        SelectQuery query = connection.select("prefix me: <"+NS+">" +
+        SelectQuery query = connection.select("prefix me: <"+MusicOntology.NS+">" +
                 "select DISTINCT ?location ?locationName WHERE { ?location rdf:type me:Location." +
                 "?location dc:title ?locationName.}");
         List<String> locationsName = getValuesFromQuery(query, "locationName");
@@ -134,7 +121,7 @@ public class ConnectionManager {
 
     }
     public List<String> getImages(){
-        SelectQuery query = connection.select("prefix me: <"+NS+">" +
+        SelectQuery query = connection.select("prefix me: <"+MusicOntology.NS+">" +
                 "select DISTINCT ?image  WHERE { ?image rdf:type me:Image." +
                 "?image me:represents ?something}" );
         return query.execute().stream().map(x -> String.valueOf(x.get("image")))
@@ -142,7 +129,7 @@ public class ConnectionManager {
                 .collect(Collectors.toList());
     }
     public BidiMap<String, String> getActivityType() {
-        SelectQuery query = connection.select("prefix me: <"+NS+">" +
+        SelectQuery query = connection.select("prefix me: <"+MusicOntology.NS+">" +
                 "select DISTINCT ?activityName ?activityType WHERE { " +
                 "?activity rdf:type me:Activity." +
                 "?activity me:hasType ?activityType." +
@@ -187,29 +174,29 @@ public class ConnectionManager {
         Resource imgPreResource;
         Resource imgPostResource;
         String locationURI;
-        String listeningURI = NS + uriGenerator.nextString();
-        String activityDoingURI = NS + uriGenerator.nextString();
-        String memoryURI = NS + uriGenerator.nextString();
-        String wantToDoURI = NS + uriGenerator.nextString();
+        String listeningURI = MusicOntology.NS + uriGenerator.nextString();
+        String activityDoingURI = MusicOntology.NS + uriGenerator.nextString();
+        String memoryURI = MusicOntology.NS + uriGenerator.nextString();
+        String wantToDoURI = MusicOntology.NS + uriGenerator.nextString();
 
 
         Model aModel = SDJenaFactory.createModel(connection);
         aModel.begin();
-         imgPreResource = aModel.createResource(NS+imgPre);
-         imgPostResource = aModel.createResource(NS+imgPost);
-         locationResource = aModel.createResource(LOCATION_TYPE);
-         listeningResource = aModel.createResource(MUSIC_LISTENING_TYPE);
-         activityResource = aModel.createResource(ACTIVITY_TYPE);
-         memoryResource =  aModel.createResource(EPISODIC_MEMORY_TYPE);
-         songResource = aModel.createResource(song);
+        imgPreResource = aModel.createResource(MusicOntology.NS+imgPre);
+        imgPostResource = aModel.createResource(MusicOntology.NS+imgPost);
+        locationResource = aModel.createResource(MusicOntology.LOCATION_TYPE);
+        listeningResource = aModel.createResource(MusicOntology.MUSIC_LISTENING_TYPE);
+        activityResource = aModel.createResource(MusicOntology.ACTIVITY_TYPE);
+        memoryResource =  aModel.createResource(MusicOntology.EPISODIC_MEMORY_TYPE);
+        songResource = aModel.createResource(song);
         Resource location;
 
         if (!oldLocation.equals("")) {
             locationURI = oldLocation.substring(0,oldLocation.indexOf("-"));
-            location = aModel.createResource(NS+locationURI);
+            location = aModel.createResource(MusicOntology.NS+locationURI);
         }else{
             locationURI = generateRandomURI();
-             location = aModel.createResource(NS+locationURI)
+            location = aModel.createResource(MusicOntology.NS+locationURI)
                     .addProperty(RDF.type, locationResource);
             if(!locationDesc.isEmpty()) {
                 location.addLiteral(aModel.createProperty(String.valueOf(DC_11.description)), locationDesc);
@@ -220,7 +207,7 @@ public class ConnectionManager {
 
         Resource activityDoing = aModel.createResource(activityDoingURI)
                 .addProperty(RDF.type,activityResource)
-                .addProperty(aModel.createProperty(HAS_TYPE), aModel.createResource(NS+whileDoingActivityTypeString));
+                .addProperty(aModel.createProperty(MusicOntology.HAS_TYPE), aModel.createResource(MusicOntology.NS+whileDoingActivityTypeString));
         if(!whileDoingDesc.isEmpty()) {
             activityDoing.addLiteral(aModel.createProperty(String.valueOf(DC_11.description)), whileDoingDesc);
         }if(!whileDoingName.isEmpty()){
@@ -228,7 +215,7 @@ public class ConnectionManager {
         }
         Resource wantToDo = aModel.createResource(wantToDoURI)
                 .addProperty(RDF.type,activityResource)
-                .addProperty(aModel.createProperty(HAS_TYPE), aModel.createResource(NS+wantToDoActivityTypeString));
+                .addProperty(aModel.createProperty(MusicOntology.HAS_TYPE), aModel.createResource(MusicOntology.NS+wantToDoActivityTypeString));
         if(!wantToDoName.isEmpty()) {
             wantToDo.addLiteral(aModel.createProperty(String.valueOf(DC_11.description)), wantToDoDesc);
         }if(!wantToDoDesc.isEmpty()){
@@ -245,13 +232,13 @@ public class ConnectionManager {
                 .addProperty( RDF.type,listeningResource)
                 .addProperty( FOAF.name,name)
                 .addProperty(FOAF.surname,surname)
-                .addProperty(aModel.createProperty(LISTEN_TO),songResource)
-                .addProperty(aModel.createProperty(WHILE_DOING),activityDoing)
-                .addProperty(aModel.createProperty(WANT_DO),wantToDo)
-                .addProperty(aModel.createProperty(HAS_LOCATION),location)
-                .addProperty(aModel.createProperty(REVIVES_MEMORY),memory)
-                .addProperty(aModel.createProperty(PRE_LISTENING_IMAGE),imgPreResource)
-                .addProperty(aModel.createProperty(POST_LISTENING_IMAGE),imgPostResource);
+                .addProperty(aModel.createProperty(MusicOntology.LISTEN_TO),songResource)
+                .addProperty(aModel.createProperty(MusicOntology.WHILE_DOING),activityDoing)
+                .addProperty(aModel.createProperty(MusicOntology.WANT_DO),wantToDo)
+                .addProperty(aModel.createProperty(MusicOntology.HAS_LOCATION),location)
+                .addProperty(aModel.createProperty(MusicOntology.REVIVES_MEMORY),memory)
+                .addProperty(aModel.createProperty(MusicOntology.PRE_LISTENING_IMAGE),imgPreResource)
+                .addProperty(aModel.createProperty(MusicOntology.POST_LISTENING_IMAGE),imgPostResource);
         aModel.commit();
         aModel.close();
     }
