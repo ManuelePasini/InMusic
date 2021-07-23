@@ -1,0 +1,52 @@
+@prefix me: <http://api.stardog.com/>.
+
+<black>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000212>. #negative emotions
+
+<depression>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000016>; #grief
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000028>. #anxiety
+
+<relax>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000039>; #aestethic pleasure
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000036>. #sensory pleasure
+
+<savio>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000042>. #happiness
+
+<starry-night>
+a me:Image;
+dc:name "Starry Night";
+dc:description "The Starry Night, a moderately abstract landscape painting of an expressive night sky over a small hillside village";
+dc:creator <#van-gogh>;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000177>. #hope
+
+<#wheatfield-with-crows>
+a me:Image;
+dc:name "Wheatfield with Crows";
+dc:description "Wheatfield with Crows is one of Van Gogh's most famous paintings. It is often claimed that this was his very last work. The menacing sky, the crows and the dead-end path are said to refer to the end of his life approaching. But that is just a persistent myth. In fact, he made several other works after this one.";
+dc:creator <#van-gogh>;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000016>. #hope
+
+<euro2020>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000041>;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000046>.
+
+<the-kiss>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000034>; #joy
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000040>. #sexual pleasure
+
+<tomorrowland>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000038>; #social pleasure
+
+<xp>
+a me:Image;
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000039>; #aestethic pleasure
+me:represents <http://purl.obolibrary.org/obo/MFOEM_000211>. #positive emotions

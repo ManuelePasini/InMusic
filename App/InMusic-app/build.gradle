@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+group 'com.stardog.examples'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url "http://maven.stardog.com" }
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    // Core Dependencies
+    compile ('com.complexible.stardog:client-http:7.7.0')
+    compile('org.reflections:reflections:0.9.10')
+    compile('com.complexible.stardog.jena:stardog-jena:6.0.0')
+
+    compile('org.apache.jena:apache-jena-libs:3.17.0')
+    compile( 'org.apache.commons:commons-collections4:4.4')
+    //compile('org.openrdf:openrdf-model:1.2.7')
+    //compile('org.openrdf.sesame:sesame-runtime:4.1.2')
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs "src/main/resources", "resources"
+        }
+    }
+}
